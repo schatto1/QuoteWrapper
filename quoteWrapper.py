@@ -12,6 +12,7 @@ readFile = open("20180228 ADMET2 ES113=1 list.txt", "r")
 writeFile = open("modifiedForSQL.txt", "w+")
 
 for line in readFile:
+    line = line.rstrip('\n')
     writeFile.write("\"" + line + "\", ")
     
 readFile.close()
